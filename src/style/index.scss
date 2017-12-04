@@ -1,0 +1,28 @@
+* {
+  // border: 1px solid coral
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#root>div {
+  h1 {
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+    li {
+      width: 50vw;
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
