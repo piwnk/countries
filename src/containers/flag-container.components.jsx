@@ -7,8 +7,8 @@ import { getCountries, searchCountries } from '../actions/countries';
 
 class CountryFlagContainer extends Component {
   componentDidMount() {
-    this.props.dispatch(getCountries());
-    // this.props.dispatch(searchCountries(''));
+    // this.props.dispatch(getCountries());
+    this.props.dispatch(searchCountries(''));
   }
 
   search(e) {
