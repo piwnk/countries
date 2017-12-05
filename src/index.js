@@ -9,18 +9,9 @@ import store from './store';
 import routes from './routes';
 
 import './style/index.css';
+import './style/country.css';
 
-// import DevTools from './store/DevTools';
-
-import { getCountries } from './actions/countries';
-
-
-// const App = () => (
-//   <div className="App">
-//     <h1>Init</h1>
-//     <DevTools />
-//   </div>
-// );
+// import { getCountry, getCountries } from './actions/countries';
 
 const Wrapper = () => (
   <Provider store={store}>
@@ -35,4 +26,5 @@ render(<Wrapper />, document.getElementById('root'));
 
 registerServiceWorker();
 
-store.dispatch(getCountries());
+// store.dispatch(getCountry(3));
+// store.dispatch(getCountries());
