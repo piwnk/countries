@@ -3,22 +3,28 @@ import { connect } from 'react-redux';
 
 import CountryFlagList from '../presentational/flag-list.component';
 
-import { getCountries } from '../actions/countries';
+import { getCountries, searchCountries } from '../actions/countries';
 
 class CountryFlagContainer extends Component {
-  // ESLINT: useless constructor
-  // constructor(props) {
-  //   super(props);
-  // }
-
   componentDidMount() {
     this.props.dispatch(getCountries());
+    // this.props.dispatch(searchCountries(''));
+  }
+
+  search(e) {
+    this.props.dispatch(searchCountries(e.target.value));
   }
 
   render() {
     return (
       <div>
-        <CountryFlagList countries={this.props.countries} />
+        <div>
+          <input
+            type="text"
+            onChange={e => this.search(e)}
+          />
+        </div>
+        <CountryFlagList countries={this.props.visibleCountries} />
       </div>
     );
   }
@@ -26,6 +32,7 @@ class CountryFlagContainer extends Component {
 
 const mapStateToProps = store => ({
   countries: store.countriesReducer.countries,
+  visibleCountries: store.countriesReducer.visibleCountries,
 });
 
 export default connect(mapStateToProps)(CountryFlagContainer);
