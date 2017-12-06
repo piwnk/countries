@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import CountryFlag from './flag.component';
 
-const CountryFlagList = ({ countries }) => (
+const CountryFlagList = ({ countries, deleteCountry }) => (
   <div className="countries-list">
     {countries.map(country => (
       <div
@@ -16,6 +16,10 @@ const CountryFlagList = ({ countries }) => (
         >
           <CountryFlag country={country} />
         </Link>
+        <button
+          onClick={deleteCountry.bind(null, country.id)}
+        >X
+        </button>
       </div>
     ))}
   </div>
