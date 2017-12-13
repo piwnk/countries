@@ -4,25 +4,60 @@ body {
   font-family: sans-serif;
 }
 
-#root > div h1 {
-  text-align: center;
-}
-
-#root > div ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  padding-left: 0;
-}
-
-#root > div ul li {
-  width: 50vw;
-  text-align: center;
-}
-
-#root > div ul li a {
+.top-bar {
+  background: black;
   text-decoration: none;
 }
- 
 
- /*# sourceMappingURL= index.css.map */
+.top-bar * {
+  color: white;
+}
+
+.top-bar .tabs {
+  margin: 0 10px;
+  background: black;
+}
+
+.top-bar .tabs .tabs-title {
+  color: white;
+}
+
+.top-bar .tabs .tabs-title a {
+  padding: .8rem;
+  font-size: 1rem;
+}
+
+.top-bar input {
+  color: grey;
+}
+
+.home {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.country-list {
+  margin: 20px auto;
+  display: grid;
+  justify-content: center;
+}
+
+.country-list .single-country {
+  position: relative;
+  width: 70vw;
+}
+
+.country-list .single-country .country-flag {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.country-list .single-country button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 2;
+}
+
+.country-wrapper {
+  display: grid;
+}

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { getCountry } from '../actions/countries';
 
-import CountryDetails from '../presentational/country-details.component';
+import CountryDetails from '../components/country-details.dumb';
 
 class CountryDetailsContainer extends Component {
   componentDidMount() {
