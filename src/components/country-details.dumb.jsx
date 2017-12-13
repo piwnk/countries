@@ -4,19 +4,18 @@ const CountryDetails = ({ country }) => (
   <div className="country-wrapper">
     <header>
       <img
-        className="country-photo"
+        className="flag"
         src={country.imageUrl}
-        // alt="country photo" // ESLINT: useless
         alt=""
       />
     </header>
 
-    <div className="country-info">
+    <div className="country-name">
       <h1>{country.name}</h1>
       <h2>{`Continent: ${country.continent}`}</h2>
     </div>
 
-    <div className="info">
+    <div className="country-details">
       <div>
         <span>{country.populace}</span>
         <span>Population [mln]</span>

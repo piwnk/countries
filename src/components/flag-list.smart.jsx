@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import CountryFlagList from '../presentational/flag-list.component';
+import CountryFlagList from '../components/flag-list.dumb';
 
-import {
-  // getCountries,
-  searchCountries,
-  deleteCountry,
-} from '../actions/countries';
+import { searchCountries } from '../actions/countries';
 
 class CountryFlagContainer extends Component {
   componentDidMount() {
@@ -19,24 +15,11 @@ class CountryFlagContainer extends Component {
     this.props.dispatch(searchCountries(e.target.value));
   }
 
-  deleteCountry(id) {
-    this.props.dispatch(deleteCountry(id));
-  }
-
   render() {
     return (
-      <div>
-        <div>
-          <input
-            type="text"
-            onChange={e => this.search(e)}
-          />
-        </div>
-        <CountryFlagList
-          countries={this.props.visibleCountries}
-          deleteCountry={this.deleteCountry.bind(this)}
-        />
-      </div>
+      <CountryFlagList
+        countries={this.props.visibleCountries}
+      />
     );
   }
 }

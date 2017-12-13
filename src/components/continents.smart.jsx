@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { setContinent, deleteCountry } from '../actions/countries';
+import { setContinent } from '../actions/countries';
 
-import CountryFlagList from '../presentational/flag-list.component';
+import CountryFlagList from '../components/flag-list.smart';
 
 class ContinentContainer extends Component {
   componentDidMount() {
     this.props.dispatch(setContinent('Europa'));
   }
 
-  deleteCountry(id) {
-    this.props.dispatch(deleteCountry(id));
-  }
+  // deleteCountry(id) {
+  //   this.props.dispatch(deleteCountry(id));
+  // }
 
   chooseContinent(event) {
     this.props.dispatch(setContinent(event.target.value));
@@ -29,7 +29,6 @@ class ContinentContainer extends Component {
         </select>
         <CountryFlagList
           countries={this.props.visibleCountries}
-          deleteCountry={this.deleteCountry.bind(this)}
         />
       </div>
     );

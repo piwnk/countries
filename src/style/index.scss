@@ -8,21 +8,60 @@ body {
   font-family: sans-serif;
 }
 
-#root>div {
-  h1 {
-    text-align: center;
+
+.top-bar {
+  background: black;
+
+  * {
+    color: white;
   }
-  ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding-left: 0;
-    li {
-      width: 50vw;
-      text-align: center;
+
+  text-decoration: none;
+
+  .tabs {
+    margin: 0 10px;
+    background: black;
+    .tabs-title {
+      color: white;
       a {
-        text-decoration: none;
+        padding: .8rem;
+        font-size: 1rem;
       }
     }
   }
+  input {
+    color: grey;
+  }
+}
+
+.home {
+  margin-top: 100px;
+  text-align: center;
+  
+}
+
+.country-list {
+  margin: 20px auto;
+  display: grid;
+  justify-content: center;
+  .single-country {
+    position: relative;
+    width: 70vw;
+   
+    .country-flag {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+
+    }
+    button {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: 2;
+    }
+  }
+}
+
+
+.country-wrapper {
+  display: grid;
 }
