@@ -18,7 +18,7 @@ class CountryFlagCont extends Component {
         />
         <button
           onClick={() => this.deleteCountry(this.props.country.id)}
-        >X
+        ><i className="fa fa-times-circle" />
         </button>
       </div>
     );

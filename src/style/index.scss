@@ -43,20 +43,26 @@ body {
 .country-list {
   margin: 20px auto;
   display: grid;
+  // grid-template-columns: repeat(auto-fill, 500px);
+  grid-gap: 20px;
   justify-content: center;
   .single-country {
     position: relative;
     width: 70vw;
+    justify-self: center;
+    align-self: center;
    
     .country-flag {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
-
     }
     button {
       position: absolute;
       right: 5px;
       top: 5px;
       z-index: 2;
+      i {
+        font-size: 1.1rem;
+      }
     }
   }
 }

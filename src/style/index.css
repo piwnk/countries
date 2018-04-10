@@ -39,12 +39,15 @@ body {
 .country-list {
   margin: 20px auto;
   display: grid;
+  grid-gap: 20px;
   justify-content: center;
 }
 
 .country-list .single-country {
   position: relative;
   width: 70vw;
+  justify-self: center;
+  align-self: center;
 }
 
 .country-list .single-country .country-flag {
@@ -56,6 +59,10 @@ body {
   right: 5px;
   top: 5px;
   z-index: 2;
+}
+
+.country-list .single-country button i {
+  font-size: 1.1rem;
 }
 
 .country-wrapper {
