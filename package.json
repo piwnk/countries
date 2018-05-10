@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "foundation-sites": "^6.4.4-rc1",
+    "hoek": "^5.0.3",
     "install": "^0.10.2",
     "jquery": "^3.2.1",
     "node-sass-chokidar": "^0.0.3",
